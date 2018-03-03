@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <head>
   
 <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="admin/view/javascript/bootstrap/img/favicon.ico"> 
-<title>HireLorry</title>
+<title>Xpress Move</title>
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
