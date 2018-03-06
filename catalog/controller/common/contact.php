@@ -12,11 +12,11 @@ class ControllerCommonContact extends Controller {
         if($query)
         {
             $name=$this->request->get['name'];
-               $to="support@hirelorry.in";
+               $to="support@xpressmove.in";
             	$no=$this->request->get['mobile_no'];
             $comments=$this->request->get['message'];
         $subject="Contact Us Form";
-        $message="<br/><br/><b>Online Contact Form - Hire Lorry </b><br/><br/><table rules='all' style='border:1px solid;border-color: #666;' cellpadding='10';border-collapse:collapse;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;><tr style='background: #eee;border:1px solid black;'><td><strong>Name:</strong> </td><td>" . $name. "</td></tr><tr style='background: #eee;border:1px solid black;'><td><strong>Email ID:</strong> </td><td>" .$email. "</td></tr><tr style='background: #eee;border:1px solid black;'><td><strong>Phone Nos:</strong> </td><td>" .$no. "</td></tr><tr style='background: #eee;border:1px solid black;'><td style='width:150px;'><strong>Message :</strong> </td><td>"  .$comments. "</td></tr></table><br/><br/>";
+        $message="<br/><br/><b>Online Contact Form - Xpress Move </b><br/><br/><table rules='all' style='border:1px solid;border-color: #666;' cellpadding='10';border-collapse:collapse;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;><tr style='background: #eee;border:1px solid black;'><td><strong>Name:</strong> </td><td>" . $name. "</td></tr><tr style='background: #eee;border:1px solid black;'><td><strong>Email ID:</strong> </td><td>" .$email. "</td></tr><tr style='background: #eee;border:1px solid black;'><td><strong>Phone Nos:</strong> </td><td>" .$no. "</td></tr><tr style='background: #eee;border:1px solid black;'><td style='width:150px;'><strong>Message :</strong> </td><td>"  .$comments. "</td></tr></table><br/><br/>";
         if($to!='')
         {
         $this->sendMail($to,$subject,urlencode($message),$name);
@@ -51,15 +51,15 @@ class ControllerCommonContact extends Controller {
         $mail->Port = 587;
 
         // outMail username        
-        $mail->Username = "business@hirelorry.in";
+        $mail->Username = "business@xpressmove.in";
         
         // outMail password
-        $mail->Password = "hirelorry#123";
+        $mail->Password = "xpressmove@2018";
         
         // Message details
-        $mail->AddReplyTo('info@getwebcare.in', 'GetWebCare');
+        $mail->AddReplyTo('support@xpressmove.in', 'Xpress Move');
         $mail->AddAddress($to, $name);
-        $mail->SetFrom('business@hirelorry.in', 'Hire Lorry');
+        $mail->SetFrom('business@xpressmove.in', 'Xpress Move');
         $mail->Subject = $subject;
         $mail->MsgHTML(urldecode($message));
         
